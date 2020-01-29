@@ -14,6 +14,11 @@
 		45D44E4223E200FA0029FA02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D44E4023E200FA0029FA02 /* LaunchScreen.storyboard */; };
 		45D44E4D23E205860029FA02 /* SpellListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D44E4C23E205860029FA02 /* SpellListTableViewController.swift */; };
 		45D44E4F23E2059D0029FA02 /* SpellDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D44E4E23E2059D0029FA02 /* SpellDetailViewController.swift */; };
+		45D44E5223E207030029FA02 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45D44E5023E207030029FA02 /* Model.xcdatamodeld */; };
+		45D44E5423E2074B0029FA02 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D44E5323E2074B0029FA02 /* CoreDataStack.swift */; };
+		45D44E5623E207DD0029FA02 /* Spell+Convenience .swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D44E5523E207DD0029FA02 /* Spell+Convenience .swift */; };
+		45D44E5923E209C00029FA02 /* SpellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D44E5823E209C00029FA02 /* SpellController.swift */; };
+		45D44E5B23E209F40029FA02 /* SpellRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D44E5A23E209F40029FA02 /* SpellRepresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,12 @@
 		45D44E4323E200FA0029FA02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D44E4C23E205860029FA02 /* SpellListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellListTableViewController.swift; sourceTree = "<group>"; };
 		45D44E4E23E2059D0029FA02 /* SpellDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellDetailViewController.swift; sourceTree = "<group>"; };
+		45D44E5123E207030029FA02 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		45D44E5323E2074B0029FA02 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		45D44E5523E207DD0029FA02 /* Spell+Convenience .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Spell+Convenience .swift"; sourceTree = "<group>"; };
+		45D44E5723E2090F0029FA02 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		45D44E5823E209C00029FA02 /* SpellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellController.swift; sourceTree = "<group>"; };
+		45D44E5A23E209F40029FA02 /* SpellRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellRepresentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +85,10 @@
 		45D44E4923E2010A0029FA02 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				45D44E5023E207030029FA02 /* Model.xcdatamodeld */,
+				45D44E5323E2074B0029FA02 /* CoreDataStack.swift */,
+				45D44E5523E207DD0029FA02 /* Spell+Convenience .swift */,
+				45D44E5A23E209F40029FA02 /* SpellRepresentation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -90,6 +105,7 @@
 		45D44E4B23E201150029FA02 /* Model COntrollers */ = {
 			isa = PBXGroup;
 			children = (
+				45D44E5823E209C00029FA02 /* SpellController.swift */,
 			);
 			path = "Model COntrollers";
 			sourceTree = "<group>";
@@ -165,10 +181,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45D44E5623E207DD0029FA02 /* Spell+Convenience .swift in Sources */,
 				45D44E4F23E2059D0029FA02 /* SpellDetailViewController.swift in Sources */,
 				45D44E3623E200F80029FA02 /* AppDelegate.swift in Sources */,
+				45D44E5223E207030029FA02 /* Model.xcdatamodeld in Sources */,
+				45D44E5923E209C00029FA02 /* SpellController.swift in Sources */,
+				45D44E5423E2074B0029FA02 /* CoreDataStack.swift in Sources */,
 				45D44E3823E200F80029FA02 /* SceneDelegate.swift in Sources */,
 				45D44E4D23E205860029FA02 /* SpellListTableViewController.swift in Sources */,
+				45D44E5B23E209F40029FA02 /* SpellRepresentation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +385,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		45D44E5023E207030029FA02 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				45D44E5723E2090F0029FA02 /* Model 2.xcdatamodel */,
+				45D44E5123E207030029FA02 /* Model.xcdatamodel */,
+			);
+			currentVersion = 45D44E5723E2090F0029FA02 /* Model 2.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 45D44E2A23E200F80029FA02 /* Project object */;
 }

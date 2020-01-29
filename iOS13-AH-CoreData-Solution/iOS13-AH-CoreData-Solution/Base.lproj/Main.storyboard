@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JJd-bS-oc1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -151,7 +151,7 @@
                         <outlet property="saveSpellButton" destination="DMY-Pj-pha" id="Dxa-eM-UHX"/>
                         <outlet property="spellDetail" destination="TqF-4m-OWZ" id="9ib-6w-gYf"/>
                         <outlet property="spellName" destination="Ont-qB-AMA" id="y4Q-tF-ZDn"/>
-                        <outlet property="threatLevel" destination="aAh-PQ-qWk" id="WUx-vP-dbU"/>
+                        <outlet property="threatLevelSegController" destination="aAh-PQ-qWk" id="WUx-vP-dbU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZT-Ir-3LB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

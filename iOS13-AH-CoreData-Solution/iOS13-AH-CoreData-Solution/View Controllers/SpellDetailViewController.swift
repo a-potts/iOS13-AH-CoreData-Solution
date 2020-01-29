@@ -11,7 +11,7 @@ import UIKit
 class SpellDetailViewController: UIViewController {
 
     @IBOutlet weak var spellName: UITextField!
-    @IBOutlet weak var threatLevel: UISegmentedControl!
+    @IBOutlet weak var threatLevelSegController: UISegmentedControl!
     
     @IBOutlet weak var spellDetail: UITextView!
     @IBOutlet weak var saveSpellButton: UIButton!
@@ -19,10 +19,46 @@ class SpellDetailViewController: UIViewController {
         super.viewDidLoad()
 
         saveSpellButton.layer.cornerRadius = 25
+        updateViews()
     }
+    
+    var spell: Spell?
+    var spellController: SpellController?
     
 
     @IBAction func saveSpellButtonTapped(_ sender: Any) {
+        if let name = spellName.text,
+            let details = spellDetail.text {
+            
+            //check which segment is selected and create a string constant that holds the corresponding mood
+            let index = threatLevelSegController.selectedSegmentIndex
+            let threatLevel = ThreatLevel.allCases[index]
+            
+            if let spell = spell {
+                spellController?.updateSpell(spell: spell, name: name, details: details, threatLevel: threatLevel)
+            } else {
+                spellController?.createSpell(with: name, details: details, threatLevel: threatLevel, context: CoreDataStack.share.mainContext)
+            }
+            
+        }
+        
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func updateViews(){
+        guard isViewLoaded else {return}
+        
+        title = spell?.name ?? ""
+        spellDetail.text = spell?.details
+        spellName.text = spell?.name
+        
+        if let threatString = spell?.threatLevel,
+            let threatLevel = ThreatLevel(rawValue: threatString) {
+            
+            let index = ThreatLevel.allCases.firstIndex(of: threatLevel) ?? 0
+            threatLevelSegController.selectedSegmentIndex = index
+        }
+        
     }
     /*
     // MARK: - Navigation
