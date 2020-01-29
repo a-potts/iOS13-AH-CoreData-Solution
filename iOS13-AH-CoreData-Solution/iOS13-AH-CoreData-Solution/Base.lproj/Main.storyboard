@@ -23,8 +23,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.30740402919999998" green="0.0" blue="0.0057551296720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="gIg-00-qFl" kind="show" identifier="ShowSpellDetailSegue" trigger="accessoryAction" id="tGo-dM-ZlQ"/>
+                                    <segue destination="gIg-00-qFl" kind="show" identifier="ShowSpellDetailSegue" id="BDf-oY-tdW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -72,14 +73,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Zxk-tb-jd6">
                                 <rect key="frame" x="20" y="230" width="374" height="31"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Spell:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnU-CA-YZH">
-                                        <rect key="frame" x="0.0" y="0.0" width="152.5" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Threat Level:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnU-CA-YZH">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="31"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="21"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aAh-PQ-qWk">
-                                        <rect key="frame" x="182.5" y="0.0" width="191.5" height="32"/>
+                                        <rect key="frame" x="168" y="0.0" width="206" height="32"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <segments>
                                             <segment title="🤢"/>
@@ -148,6 +149,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Spell" id="R8D-kz-cQS"/>
                     <connections>
+                        <outlet property="saveSpellButton" destination="DMY-Pj-pha" id="l30-06-Pkq"/>
                         <outlet property="spellDetail" destination="TqF-4m-OWZ" id="9ib-6w-gYf"/>
                         <outlet property="spellName" destination="Ont-qB-AMA" id="y4Q-tF-ZDn"/>
                         <outlet property="threatLevelSegController" destination="aAh-PQ-qWk" id="WUx-vP-dbU"/>
@@ -195,6 +197,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YK0-8T-63q"/>
+        <segue reference="BDf-oY-tdW"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -65,6 +65,7 @@ class SpellListTableViewController: UITableViewController {
         // Configure the cell...
         let spell = fetchResultController.object(at: indexPath)
         cell.textLabel?.text = spell.name
+        cell.textLabel?.textColor = .white
         
         return cell
     }
