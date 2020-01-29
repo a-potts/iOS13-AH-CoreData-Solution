@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4A639628-A3F7-4D0D-B6F9-B1F3EE5CFE4A"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6F9408F-E822-4321-9A63-713A2A4D6E45"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS13-AH-CoreData-Solution/Model COntrollers/SpellController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "fetchSpellFromServer(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D6F9408F-E822-4321-9A63-713A2A4D6E45 - ed25fdf556917a10"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 0 of iOS13_AH_CoreData_Solution.SpellController.fetchSpellFromServer(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "iOS13-AH-CoreData-Solution"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apotts/Desktop/iOS13-AH-CoreData-Solution/iOS13-AH-CoreData-Solution/iOS13-AH-CoreData-Solution/Model%20COntrollers/SpellController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "D6F9408F-E822-4321-9A63-713A2A4D6E45 - 72c990bddb46149b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in default argument 0 of iOS13_AH_CoreData_Solution.SpellController.fetchSpellFromServer(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "iOS13-AH-CoreData-Solution"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apotts/Desktop/iOS13-AH-CoreData-Solution/iOS13-AH-CoreData-Solution/iOS13-AH-CoreData-Solution/Model%20COntrollers/SpellController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "D6F9408F-E822-4321-9A63-713A2A4D6E45 - 19cbcffea186684d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS13_AH_CoreData_Solution.SpellController.fetchSpellFromServer(completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "iOS13-AH-CoreData-Solution"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apotts/Desktop/iOS13-AH-CoreData-Solution/iOS13-AH-CoreData-Solution/iOS13-AH-CoreData-Solution/Model%20COntrollers/SpellController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "225">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EEBF75B6-2798-4235-8C1F-ED3332B1DF9D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS13-AH-CoreData-Solution/Model COntrollers/SpellController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "createSpell(with:details:threatLevel:context:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "822568BC-12B1-49D8-86F9-B85D88E28403"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS13-AH-CoreData-Solution/View Controllers/SpellDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "saveSpellButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8B001C03-0E9D-4AC5-B1B8-EF4B2F2D146A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS13-AH-CoreData-Solution/View Controllers/SpellDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "saveSpellButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51D16621-D46C-47E1-9EEB-B1BD4AEE724D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS13-AH-CoreData-Solution/View Controllers/SpellDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "saveSpellButtonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

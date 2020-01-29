@@ -21,9 +21,9 @@ class SpellListTableViewController: UITableViewController {
            let fetchRequest: NSFetchRequest<Spell> = Spell.fetchRequest()
            
            //Sort the fetched results
-           fetchRequest.sortDescriptors = [NSSortDescriptor(key: "risk", ascending: true)]
+           fetchRequest.sortDescriptors = [NSSortDescriptor(key: "threatLevel", ascending: true)]
            
-           let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.share.mainContext, sectionNameKeyPath: "risk", cacheName: nil)
+           let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.share.mainContext, sectionNameKeyPath: "threatLevel", cacheName: nil)
            
            frc.delegate = self
            
@@ -39,11 +39,11 @@ class SpellListTableViewController: UITableViewController {
     
     
     
-   override func viewWillAppear(_ animated: Bool) {
-         super.viewWillAppear(animated)
-         
-         tableView.reloadData()
-     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
@@ -119,7 +119,7 @@ class SpellListTableViewController: UITableViewController {
                        detailVC.spellController = spellController
                        
                    }
-               } else if segue.identifier == "AddEntrySegue" {
+               } else if segue.identifier == "AddSpellSegue" {
                    
                    if let detailVC = segue.destination as? SpellDetailViewController {
                        detailVC.spellController = spellController

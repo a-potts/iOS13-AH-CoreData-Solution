@@ -14,16 +14,20 @@ class SpellDetailViewController: UIViewController {
     @IBOutlet weak var threatLevelSegController: UISegmentedControl!
     
     @IBOutlet weak var spellDetail: UITextView!
-    @IBOutlet weak var saveSpellButton: UIButton!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        saveSpellButton.layer.cornerRadius = 25
-        updateViews()
-    }
+   // @IBOutlet weak var saveSpellButton: UIButton!
+    
     
     var spell: Spell?
     var spellController: SpellController?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+      //  saveSpellButton.layer.cornerRadius = 25
+        updateViews()
+    }
+    
+   
     
 
     @IBAction func saveSpellButtonTapped(_ sender: Any) {
