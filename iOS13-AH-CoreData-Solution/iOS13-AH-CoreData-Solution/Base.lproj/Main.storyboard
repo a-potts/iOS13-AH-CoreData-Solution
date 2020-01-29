@@ -3,6 +3,199 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--List of Spells-->
+        <scene sceneID="jlL-fz-9PQ">
+            <objects>
+                <tableViewController id="QhP-AY-lTQ" customClass="SpellListTableViewController" customModule="iOS13_AH_CoreData_Solution" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fPk-Pj-2WP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.30740402919999998" green="0.0" blue="0.0057551296720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpellCell" id="gzK-rG-fUa">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gzK-rG-fUa" id="UTk-Lo-AEG">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="gIg-00-qFl" kind="show" identifier="ShowSpellDetailSegue" trigger="accessoryAction" id="tGo-dM-ZlQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QhP-AY-lTQ" id="YfF-Qo-qrw"/>
+                            <outlet property="delegate" destination="QhP-AY-lTQ" id="nh4-7i-ZgY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="List of Spells" id="ZVt-G5-8WH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="M1U-bW-Jff">
+                            <connections>
+                                <segue destination="gIg-00-qFl" kind="show" identifier="AddSpellSegue" id="YK0-8T-63q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ccx-GL-re4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023.1884057971015" y="88.392857142857139"/>
+        </scene>
+        <!--Spell-->
+        <scene sceneID="Re1-j5-1kn">
+            <objects>
+                <viewController id="gIg-00-qFl" customClass="SpellDetailViewController" customModule="iOS13_AH_CoreData_Solution" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ldz-wd-Off">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="sYZ-S1-uIx">
+                                <rect key="frame" x="20" y="146" width="374" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Spell:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaK-Ut-ggH">
+                                        <rect key="frame" x="0.0" y="0.0" width="152.5" height="34"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="21"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Spell Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ont-qB-AMA">
+                                        <rect key="frame" x="173.5" y="0.0" width="200.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Zxk-tb-jd6">
+                                <rect key="frame" x="20" y="230" width="374" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Spell:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnU-CA-YZH">
+                                        <rect key="frame" x="0.0" y="0.0" width="152.5" height="31"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="21"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aAh-PQ-qWk">
+                                        <rect key="frame" x="182.5" y="0.0" width="191.5" height="32"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <segments>
+                                            <segment title="🤢"/>
+                                            <segment title="🤕"/>
+                                            <segment title="💀"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spell Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wp-PB-DLn">
+                                <rect key="frame" x="20" y="352" width="374" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="Kx3-Zx-X9r"/>
+                                    <constraint firstAttribute="width" constant="374" id="zPX-x3-QL7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TqF-4m-OWZ">
+                                <rect key="frame" x="20" y="423" width="374" height="275"/>
+                                <color key="backgroundColor" red="0.89785669782538069" green="0.84230235846539159" blue="0.76983543917903019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="B1O-cT-RyB"/>
+                                    <constraint firstAttribute="width" constant="374" id="uTr-dD-aYz"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMY-Pj-pha">
+                                <rect key="frame" x="126" y="764" width="163" height="64"/>
+                                <color key="backgroundColor" red="0.11926004649999999" green="0.65311706849999995" blue="0.22088448499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163" id="Eyc-s5-cKq"/>
+                                    <constraint firstAttribute="height" constant="64" id="Ojg-AE-qsb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Save Spell">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveSpellButtonTapped:" destination="gIg-00-qFl" eventType="touchUpInside" id="M3z-8s-geS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30740402918781728" green="0.0" blue="0.0057551296717399947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9wp-PB-DLn" firstAttribute="leading" secondItem="Idg-hC-no2" secondAttribute="leading" constant="20" id="14N-iX-hmq"/>
+                            <constraint firstItem="Idg-hC-no2" firstAttribute="trailing" secondItem="sYZ-S1-uIx" secondAttribute="trailing" constant="20" id="6sy-te-6FG"/>
+                            <constraint firstItem="Zxk-tb-jd6" firstAttribute="leading" secondItem="Idg-hC-no2" secondAttribute="leading" constant="20" id="78d-MD-GrO"/>
+                            <constraint firstItem="Idg-hC-no2" firstAttribute="bottom" secondItem="DMY-Pj-pha" secondAttribute="bottom" constant="34" id="79Y-9e-xXj"/>
+                            <constraint firstItem="TqF-4m-OWZ" firstAttribute="top" secondItem="9wp-PB-DLn" secondAttribute="bottom" constant="8" id="Bzv-Tf-6dr"/>
+                            <constraint firstItem="Idg-hC-no2" firstAttribute="trailing" secondItem="TqF-4m-OWZ" secondAttribute="trailing" constant="20" id="N8P-aG-Deg"/>
+                            <constraint firstItem="Idg-hC-no2" firstAttribute="trailing" secondItem="DMY-Pj-pha" secondAttribute="trailing" constant="125" id="bhC-Mw-YG7"/>
+                            <constraint firstItem="9wp-PB-DLn" firstAttribute="top" secondItem="Zxk-tb-jd6" secondAttribute="bottom" constant="91" id="cDh-9g-xPX"/>
+                            <constraint firstItem="sYZ-S1-uIx" firstAttribute="leading" secondItem="Idg-hC-no2" secondAttribute="leading" constant="20" id="gR4-5d-MjX"/>
+                            <constraint firstItem="Idg-hC-no2" firstAttribute="trailing" secondItem="Zxk-tb-jd6" secondAttribute="trailing" constant="20" id="hfF-AU-4O9"/>
+                            <constraint firstItem="TqF-4m-OWZ" firstAttribute="leading" secondItem="Idg-hC-no2" secondAttribute="leading" constant="20" id="lBc-BW-pYw"/>
+                            <constraint firstItem="Zxk-tb-jd6" firstAttribute="top" secondItem="sYZ-S1-uIx" secondAttribute="bottom" constant="50" id="lXB-wD-xQQ"/>
+                            <constraint firstItem="Idg-hC-no2" firstAttribute="trailing" secondItem="9wp-PB-DLn" secondAttribute="trailing" constant="20" id="urt-sM-fAa"/>
+                            <constraint firstItem="DMY-Pj-pha" firstAttribute="leading" secondItem="Idg-hC-no2" secondAttribute="leading" constant="126" id="zOi-QS-Bda"/>
+                            <constraint firstItem="sYZ-S1-uIx" firstAttribute="top" secondItem="Idg-hC-no2" secondAttribute="top" constant="58" id="zp0-uP-SqX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Idg-hC-no2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Spell" id="R8D-kz-cQS"/>
+                    <connections>
+                        <outlet property="saveSpellButton" destination="DMY-Pj-pha" id="Dxa-eM-UHX"/>
+                        <outlet property="spellDetail" destination="TqF-4m-OWZ" id="9ib-6w-gYf"/>
+                        <outlet property="spellName" destination="Ont-qB-AMA" id="y4Q-tF-ZDn"/>
+                        <outlet property="threatLevel" destination="aAh-PQ-qWk" id="WUx-vP-dbU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZT-Ir-3LB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="21" id="04L-S9-n7B">
+                    <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Spell:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TT-s9-CiF">
+                            <rect key="frame" x="0.0" y="0.0" width="152.5" height="34"/>
+                            <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="21"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Spell Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gdw-Lp-aee">
+                            <rect key="frame" x="173.5" y="0.0" width="200.5" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="oAU-bf-hzn"/>
+                </stackView>
+            </objects>
+            <point key="canvasLocation" x="1800.0000000000002" y="87.723214285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bwv-wm-D0e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JJd-bS-oc1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cf5-j8-Yjm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QhP-AY-lTQ" kind="relationship" relationship="rootViewController" id="iTE-rT-J2R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1K-Og-tzE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.04347826086958" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YK0-8T-63q"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -12,6 +12,8 @@
 		45D44E3D23E200F80029FA02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D44E3B23E200F80029FA02 /* Main.storyboard */; };
 		45D44E3F23E200FA0029FA02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D44E3E23E200FA0029FA02 /* Assets.xcassets */; };
 		45D44E4223E200FA0029FA02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D44E4023E200FA0029FA02 /* LaunchScreen.storyboard */; };
+		45D44E4D23E205860029FA02 /* SpellListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D44E4C23E205860029FA02 /* SpellListTableViewController.swift */; };
+		45D44E4F23E2059D0029FA02 /* SpellDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D44E4E23E2059D0029FA02 /* SpellDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		45D44E3E23E200FA0029FA02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45D44E4123E200FA0029FA02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45D44E4323E200FA0029FA02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45D44E4C23E205860029FA02 /* SpellListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellListTableViewController.swift; sourceTree = "<group>"; };
+		45D44E4E23E2059D0029FA02 /* SpellDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 		45D44E4A23E2010E0029FA02 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				45D44E4C23E205860029FA02 /* SpellListTableViewController.swift */,
+				45D44E4E23E2059D0029FA02 /* SpellDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -159,8 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45D44E4F23E2059D0029FA02 /* SpellDetailViewController.swift in Sources */,
 				45D44E3623E200F80029FA02 /* AppDelegate.swift in Sources */,
 				45D44E3823E200F80029FA02 /* SceneDelegate.swift in Sources */,
+				45D44E4D23E205860029FA02 /* SpellListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
